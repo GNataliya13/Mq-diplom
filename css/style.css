@@ -37,29 +37,23 @@ header {
 .menu {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 0 auto;
 }
 
 .menu-logo {
   width: 180px;
 }
 
-.menu-logo-mobile {
-  display: none;
-  margin: 156px auto 0 auto;
-  width: 272px;
-}  
-
 .menu-list {
   display: inline-block;
   text-transform: uppercase;
-  padding-top: 10px;
+  list-style-type: none;
   margin: 0;
 }
 
 .menu-list-item {
   display: inline-block;
   margin-right: 31px;
+  margin-top: 10px;
 }
 
 .menu-list-item:last-child {
@@ -117,6 +111,15 @@ header {
   border: 2px solid #e1d9bd;
   width: 65px;
   margin: -6px auto 24px auto;
+}
+
+.trends-title-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.trends-title-link:hover {
+  color: #b59f5b;
 }
 
 .trends-posts {
@@ -182,16 +185,16 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  max-width: 71%;
+  max-width: 1170px;
   margin: 60px auto 0 auto;
-  column-gap: 10%;
 }
 
 .post {
   display: flex;
   flex-wrap: nowrap;
   column-gap: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
+  max-width: 87%;
 }
 
 .post-illustration {
@@ -244,7 +247,7 @@ header {
 }
 
 .publication-information {
-  padding-top: 10px;
+  padding-top: 6px;
   margin-bottom: 46px;
   font-size: 12px;
 }
@@ -261,7 +264,7 @@ header {
 
 .additional-content {
   margin-top: -14px;
-  max-width: 272px;
+  width: 494px;
 }
 
 .additional-content-title {
@@ -279,11 +282,20 @@ header {
   margin: -4px auto 22px auto;
 }
 
+.new-posts-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.new-posts-link:hover {
+  color: #b59f5b;
+}
+
 .new-post {
   display: flex;
   flex-wrap: nowrap;
   column-gap: 20px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .new-post-description {
@@ -306,12 +318,15 @@ header {
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-  line-height: 1.3;
+  margin: 0;
 }
 
-.new-post-information:hover {
+.new-post-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.new-post-link:hover {
   color: #b59f5b;
 }
 
@@ -342,6 +357,7 @@ header {
   border: none;
   height: 48px;
   padding-left: 18px;
+  padding-right: 18px;
   outline: none;
   width: 100%;
 }
@@ -354,8 +370,8 @@ header {
   background-color: #b59f5b;
   border: none;
   padding: 15px;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
@@ -367,23 +383,24 @@ header {
 .newsletter-group {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 14px;
 }
 
 .email-field {
   box-sizing: border-box;
   width: 100%;
-  height: 48px;
+  height: 50px;
   border: none;
   background: #f4f7f6;
   padding-left: 18px;
+  padding-right: 18px;
   outline: none;
 }
 
 .subscribe-button {
   font-weight: bold;
   width: 100%;
-  height: 48px;
+  height: 50px;
   border: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -399,7 +416,7 @@ header {
 
 .tags-list-group {
   margin-top: 56px;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
 }
 
 .tags-list {
@@ -468,7 +485,7 @@ header {
 }
 
 .products {
-  margin: 0 auto 64px auto;
+  margin: -14px auto 64px auto;
 }
 
 .products-title {
@@ -484,6 +501,15 @@ header {
   border: 2px solid #e1d9bd;
   width: 65px;
   margin: -8px auto 24px auto;
+}
+
+.products-title-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.products-title-link:hover {
+  color: #b59f5b;
 }
 
 .products-containers {
@@ -512,6 +538,15 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
+}
+
+.product-title-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-title-link:hover {
+  color: #b59f5b;
 }
 
 .product-text {
@@ -754,6 +789,7 @@ footer {
   }
 
   .products {
+    margin-top: 0px;
     margin-bottom: 52px;
   }
 
@@ -826,36 +862,28 @@ footer {
     width: 100%;
   }
 
+  .menu-logo {
+    position: absolute;
+    width: 270px;
+    left: 50%;
+    transform: translate(-50%, 204px);
+  }
+
   .menu-list {
     display: none;
   }
 
   .menu-burger {
     display: block;
-    padding-right: 50px;
-    padding-top: 50px;
-  }
-
-  .menu-logo {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
-  .menu-logo-mobile {
-    display: flex;
+    margin-top: 7px;
+    margin-right: 16px;
   }
 
   .slogan {
     width: 80%;
     font-size: 26px;
     line-height: 1.4;
-    margin-top: 34px;
+    margin-top: 264px;
   }
 
   .trends {
@@ -906,6 +934,7 @@ footer {
   }
 
   .post {
+    max-width: 100%;
     flex-wrap: wrap;
     margin-left: 4%;
     margin-right: 4%;
@@ -973,7 +1002,7 @@ footer {
   }
 
   .products {
-    margin-top: 30px;
+    margin-top: 26px;
     margin-bottom: 40px;
   }
 
@@ -1035,7 +1064,6 @@ footer {
   width: 368px;
   background-color: #ffffff;
   padding: 0px 12px 56px 12px;
-  margin: 240px auto 0 auto;
 }
 
 .popup-close {
